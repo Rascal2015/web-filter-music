@@ -1,0 +1,188 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.7rem !important ;
+    @media screen and (max-width: 1024px) {
+        font-size: 1.2rem !important;
+    }
+}
+html,
+body {
+    margin: 0 auto !important;
+    font-family: "Montserrat Regular" !important;
+}
+#wrapprer {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    min-width: 320px;
+    button {
+        color: #ffffff;
+        border-radius: 0.5rem !important;
+        background: #b73225;
+        font-weight: 900;
+        box-shadow: #c3bdb3 2px 2px 0 0;
+        border: solid #dce1e3 1px !important;
+        transition: all 250ms;
+        &:hover,
+        &.active {
+            color: #b73225;
+            background: #ffffff;
+            transform: scale(1.1);
+        }
+    }
+    #header {
+        text-align: center;
+        padding: 2% 5% !important;
+        #list-alphabet {
+            padding: 1rem !important;
+            position: relative;
+            .slick-list {
+                overflow: hidden !important;
+            }
+            .slick-next,
+            .slick-prev {
+                transform: translateY(-50%);
+                &:hover {
+                    background: #b73225;
+                }
+            }
+            .slick-next {
+                right: -4%;
+            }
+            .slick-prev {
+                left: -4%;
+            }
+        }
+    }
+    #select-tab {
+        text-align: center;
+    }
+    #tab-search {
+        padding: 2% 0%;
+        display: flex;
+        justify-content: space-between;
+        .left {
+            width: 60%;
+            font-weight: 600;
+            background: #dce1e3;
+            padding: 2% 4%;
+            form {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                #button-from {
+                    width: 100%;
+                    padding-left: 20%;
+                    display: flex;
+                    justify-content: space-between;
+                    #submit,
+                    #reset {
+                        width: 25%;
+                    }
+                }
+
+                .content-from {
+                    width: 40%;
+                    label,
+                    input,
+                    select,
+                    button {
+                        width: 50%;
+                        align-self: flex end;
+                    }
+
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 5% 0;
+                    }
+                }
+            }
+        }
+        .right {
+            background: #dce1e3;
+            #tab {
+                list-style: none;
+                display: flex;
+                padding-left: 0;
+                justify-content: space-around;
+                border-bottom: solid #ffffff 2px;
+                li {
+                    padding: 2%;
+                    background: #dce1e3;
+                    width: 33%;
+                    text-align: center;
+                    border: solid white 1px;
+                    &:hover {
+                        background: #b73225;
+                        color: #ffffff;
+                    }
+                    &.active {
+                        background: #b73225;
+                        color: #ffffff;
+                    }
+                }
+            }
+            #tab-contents {
+                .content-tab {
+                    padding: 2% 6%;
+                    display: none;
+                }
+                #tab1 {
+                    display: block;
+                }
+            }
+        }
+    }
+    #example_paginate {
+        a.current {
+            background: #b73225 !important;
+            color: #ffffff !important;
+        }
+        tbody td {
+            padding: 8px 18px !important;
+        }
+    }
+    // REPONSIVE
+    @media screen and(max-width:768px) {
+        #tab-search {
+            flex-direction: column;
+            align-items: center;
+            .left,
+            .right {
+                width: 100%;
+                margin-bottom: 2%;
+            }
+            .left {
+                form {
+                    .content-from div {
+                        flex-direction: column;
+                        label,
+                        input,
+                        select {
+                            width: 100% !important;
+                        }
+                    }
+                    #button-from {
+                        padding-left: 0 !important;
+                        #submit,
+                        #reset {
+                            width: 40% !important;
+                        }
+                    }
+                }
+            }
+        }
+        #table {
+            font-size: 1rem !important;
+            td {
+                padding: 2% 0 !important;
+            }
+            td {
+                text-align: center;
+            }
+        }
+    }
+}
